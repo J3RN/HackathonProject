@@ -32,7 +32,7 @@ Install Ruby and Rails
 ----------------------
 <pre><code>
 rvm install ruby
-gem install rails
+gem install rails --no-ri --no-rdoc
 </code></pre>
 
 Make Files from the Outside World More Accessible
