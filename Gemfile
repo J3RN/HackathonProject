@@ -18,6 +18,12 @@ gem 'devise'
 # Slim - because it's great
 gem 'slim'
 
+# paperclip for file uploading
+gem 'paperclip', '~>3.0'
+
+#act_as_commentable for... commenting
+gem 'acts_as_commentable'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
