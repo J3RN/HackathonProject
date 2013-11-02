@@ -6,6 +6,18 @@ gem 'rails', '4.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Use Postgres in production
+gem 'pg'
+
+# Use Thin for Rails server
+gem 'thin'
+
+# Devise for Users
+gem 'devise'
+
+# Slim - because it's great
+gem 'slim'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
