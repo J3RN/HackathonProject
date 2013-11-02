@@ -19,6 +19,7 @@ apt-get -y install curl vim nginx postgresql > /dev/null
 Install RVM
 -----------
 <pre><code>\curl -L https://get.rvm.io | sudo bash -s stable
+sudo usermod vagrant -g rvm
 </code></pre>
 
 Log In and Out
