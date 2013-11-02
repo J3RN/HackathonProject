@@ -36,7 +36,7 @@ Configure the Server
 
 Bundle the Project
 ------------------
-<pre><code>cd ~/project/HackathonProject
+<pre><code>cd ~/project
 bundle
 </code></pre>
 
