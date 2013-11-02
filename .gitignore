@@ -1,12 +1,19 @@
-# Logs and temp files. No.
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+.rvmrc
+/.bundle
+/vendor/bundle
 /log/*
 /tmp/*
-
-# Development databases. No.
 /db/*.sqlite3
-
-# The database file. Secrets are kept here.
-/config/database.yml
-
-# Ignore Vagrant stuffs
-.vagrant
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
+.project
+config/initializers/secret_token.rb
