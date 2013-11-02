@@ -13,7 +13,7 @@ Install some software from the repos
 ------------------------------------
 <pre><code>apt-get update > /dev/null
 apt-get -y upgrade > /dev/null
-apt-get -y install curl vim nginx postgresql > /dev/null
+apt-get -y install curl vim nginx postgresql libpq-dev > /dev/null
 </code></pre>
 
 Install RVM
@@ -32,7 +32,7 @@ Install Ruby and Rails
 ----------------------
 <pre><code>
 rvm install ruby
-gem install rails
+gem install rails --no-ri --no-rdoc
 </code></pre>
 
 Make Files from the Outside World More Accessible
