@@ -32,7 +32,7 @@ Make Files from the Outside World More Accessible
 
 Configure the Server
 --------------------
-<pre><code>sudo mv my_nginx.conf /etc/nginx/nginx.conf</pre></code>
+<pre><code>sudo mv my_nginx.conf /etc/nginx/nginx.conf</code></pre>
 
 Bundle the Project
 ------------------
