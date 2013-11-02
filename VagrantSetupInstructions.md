@@ -16,11 +16,20 @@ apt-get -y upgrade > /dev/null
 apt-get -y install curl vim nginx postgresql nginx > /dev/null
 </code></pre>
 
-Install RVM, Ruby, and Rails
-----------------------------
-<pre><code>\curl -L https://get.rvm.io | bash -s stable
-source ~/.profile
-source ~/.rvm/scripts/rvm
+Install RVM
+-----------
+<pre><code>\curl -L https://get.rvm.io | sudo bash -s stable
+</code></pre>
+
+Log In and Out
+--------------
+<pre><code>exit
+vagrant ssh
+</code></pre>
+
+Install Ruby and Rails
+----------------------
+<pre><code>
 rvm install ruby
 gem install rails
 </code></pre>
