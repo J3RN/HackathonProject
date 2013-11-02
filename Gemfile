@@ -14,8 +14,8 @@ gem 'thin'
 # Devise for Users
 gem 'devise'
 
-# Slim - because it's great
-gem 'slim'
+# Haml is awesome
+gem 'haml'
 
 # paperclip for file uploading
 gem 'paperclip', '~>3.0'
