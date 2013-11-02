@@ -1,6 +1,6 @@
 class MyDevise::RegistrationsController < Devise::RegistrationsController
   def create
-    # add custom create logic here
+  	@user = User.create(user_params)
   end
 
   def user_params
