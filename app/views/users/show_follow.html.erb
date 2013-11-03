@@ -1,0 +1,11 @@
+<%= gravatar_for @user %><br>
+<%= @user.name %><br>
+<%= @user.email %><br><br>
+
+<h1><%= @title %></h1>
+<% if @users.any? %>
+	<% @users.each do |u| %>
+		<%= link_to gravatar_small_for(u), u %>
+		<%= u.name %><br>
+	<% end %>
+<% end %>

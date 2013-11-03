@@ -195,6 +195,11 @@ textarea, input {
   margin: 10px 2em 0 .5em;
 }
 
+.user-meta-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .logoff {
   // border-box so that padding won't affect
   // height and width of elements!
