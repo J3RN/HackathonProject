@@ -47,7 +47,7 @@ body {
 }
 
 .l-stacked {
-  display: block
+  display: block;
 }
 
 .l-center {
@@ -126,4 +126,12 @@ textarea, input {
   padding: $padding-amt;
   font-family: $fontStack;
   font-size: 1.3em;
+  margin-bottom: .5em !important;
+}
+
+.stack-unstack {
+  display: block;
+  @media (min-width: 700px) {
+    display: inline-block;
+  }
 }
