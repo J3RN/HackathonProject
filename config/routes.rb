@@ -1,6 +1,8 @@
 Fish::Application.routes.draw do
   devise_for :users
   get 'users/:id' => 'users#show'
+  resources :images
+  get 'images/new' => 'images#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
