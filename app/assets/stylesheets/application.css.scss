@@ -14,6 +14,12 @@
 
 // Google Webfont Import
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
 
 $fontStack: "Open Sans", Verdana, Arial, sans-serif;
 $blue: hsla(211, 68%, 57%, 1);
@@ -109,7 +115,11 @@ img {
 
 .main-navbar {
   background: $superDarkGray;
-  height: 2.4em;
+  color: white;
+  height: 40px;
+  .username {
+    float: right;
+  }
 }
 
 .main-navbar ul {
@@ -167,4 +177,14 @@ textarea, input {
 
 .main {
   margin: 4em 0;
+}
+
+.gravatar-top {
+  float: right;
+}
+
+.username {
+  float: right;
+  vertical-align: top;
+  margin: 10px 2em 0 .5em;
 }
