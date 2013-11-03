@@ -7,6 +7,9 @@ Fish::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  # For the dashboard page
+  get 'dashboard' => 'welcome#dashboard'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
