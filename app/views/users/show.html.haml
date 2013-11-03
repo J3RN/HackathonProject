@@ -17,4 +17,4 @@
   %div.profile-images.clearfix
     \#{render 'follow_form' if user_signed_in?}
     - @images.each do |image|
-      = image_tag image.image.url
+      = link_to image_tag(image.image.url), image_path(image)
