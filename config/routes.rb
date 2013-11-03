@@ -1,5 +1,6 @@
 Fish::Application.routes.draw do
   devise_for :users
+  resources :images
   resources :users do
     member do
       get :following, :followers

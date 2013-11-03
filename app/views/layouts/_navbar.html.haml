@@ -11,6 +11,5 @@
         = link_to "/users/#{current_user.id}", :class => "user-meta-link" do
           %p.username= current_user.name
           = gravatar_small_for current_user
-        = link_to image_tag("settings.png", id: "logo", alt: "Settings"), '/users/edit'
       - else
         = link_to "Sign In", new_user_session_path, :class => "btn btn-blue state-button"
