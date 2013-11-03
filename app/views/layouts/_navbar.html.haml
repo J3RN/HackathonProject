@@ -2,7 +2,7 @@
   %ul
     %li
       - if user_signed_in?
-        = link_to "FISH", dashboard_path
+        = link_to image_tag("300x300_fish_white_left.png", id: "logo"), dashboard_path
       - else
         = link_to "FISH", root_path
     %li
