@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131103060745) do
+=======
+ActiveRecord::Schema.define(version: 20131103061637) do
+>>>>>>> upstream/develop
 
   create_table "albums", force: true do |t|
     t.string   "title"
@@ -19,6 +23,7 @@ ActiveRecord::Schema.define(version: 20131103060745) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "artworks", force: true do |t|
     t.string   "uploaded_file_file_name"
     t.string   "uploaded_file_content_type"
@@ -39,6 +44,20 @@ ActiveRecord::Schema.define(version: 20131103060745) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
+=======
+  create_table "images", force: true do |t|
+    t.string   "title"
+    t.integer  "loves"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+>>>>>>> upstream/develop
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

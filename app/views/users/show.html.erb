@@ -1,6 +1,13 @@
 <%= gravatar_for @user %><br>
 <%= @user.name %><br>
+<<<<<<< HEAD
 <%= @user.email %><br><br>
 <a href="<%= following_user_path(@user) %>" style="text-decoration:none; color:black"><%= @user.name %> is following <strong><%= @user.followed_users.count %></strong> users.</a><br>
 <a href="<%= followers_user_path(@user) %>" style="text-decoration:none; color:black"><%= @user.name %> has <strong><%= @user.followers.count %></strong> followers.</a><br>
 <%= render 'follow_form' if user_signed_in? %>
+=======
+<%= @user.email %>
+<% @images.each do |image| %>
+  <%=image_tag image.image.url %>
+<% end %>
+>>>>>>> upstream/develop
