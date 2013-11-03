@@ -251,6 +251,10 @@ textarea, input {
   }
 }
 
+.dashboard-images {
+  @extend .profile-images;
+}
+
 .full-image {
   max-width: 80%;
   max-height: 80%;
