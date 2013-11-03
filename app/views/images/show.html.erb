@@ -1,19 +1,9 @@
-<p id="notice"><%= notice %></p>
+<h2 class="centered"><%= @image.title %></h2>
 
 <p>
-  <strong>Title:</strong>
-  <%= @image.title %>
+  <%= @image.loves %> loves
 </p>
 
-<p>
-  <strong>Loves:</strong>
-  <%= @image.loves %>
-</p>
+<%=image_tag @image.image.url, :class => "full-image" %>
 
-<p>
-  <strong>Image:</strong>
-  <%=image_tag @image.image.url %>
-</p>
-
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+<%= link_to 'Edit', edit_image_path(@image) %>
