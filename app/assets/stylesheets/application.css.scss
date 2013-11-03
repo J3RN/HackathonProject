@@ -64,13 +64,13 @@ body {
   padding: .5em .8em;
   color: white;
   margin-bottom: 1em;
-
-  @media (min-width: 600px) {
-  }
 }
 
 .btn-large {
   width: 70%;
+  @media (min-width: 400px) {
+    width: 300px
+  }
 }
 
 .shadow {
@@ -91,6 +91,8 @@ body {
 
 .btn-red {
   background: $red;
+  &:hover { background: darken($red, 5%) }
+  &:active { @include box-shadow(inset, 0, 0, 5px, darken($red, 20%)) }
 }
 
 .centered {
