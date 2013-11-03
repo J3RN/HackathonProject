@@ -23,15 +23,13 @@ gem 'paperclip', '~>3.0'
 #act_as_commentable for... commenting
 gem 'acts_as_commentable'
 
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
 group :assets do
   gem 'sass-rails' # if running rails 3.1 or greater
-  gem 'compass-rails'
+  gem 'compass-rails' # for sass mixins
+  gem 'uglifier', '>= 1.3.0'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

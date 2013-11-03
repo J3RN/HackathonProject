@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+// Google Webfont Import
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700);
+
+$fontStack: "Open Sans", Verdana, Arial, sans-serif;
+$blue: hsla(211, 68%, 57%, 1);
+$darkBlue: darken($blue, 20%);
+$darkGray: #888;
+
+body {
+  /*
+   * should always add a default background color
+   * just in case user has a weird default color set
+   */
+  background: white;
+  font-family: $fontStack;
+}
+
+.l-stacked {
+  display: block
+}
+
+.l-center {
+  margin: 0 auto;
+}
+
+.btn {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: .5em .8em;
+  color: white;
+  margin-bottom: 1em;
+  width: 70%;
+}
+
+.btn-blue {
+  background: $blue;
+}
+
+.shadow {
+  -moz-box-shadow:    0px 3px 3px 0px $darkBlue;
+  -webkit-box-shadow: 0px 3px 3px 0px $darkBlue;
+  box-shadow:         0px 3px 3px 0px $darkBlue;
+}
