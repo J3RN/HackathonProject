@@ -5,6 +5,12 @@
     %div.profile-meta
       %h1= @user.name
 
+      = link_to "New Image", new_image_path, :class => "btn btn-blue"
+      = link_to "New Album", new_album_path, :class => "btn btn-blue"
+
+      %br
+      %br
+
       = @user.name
       is following
       %strong= @user.followed_users.count
