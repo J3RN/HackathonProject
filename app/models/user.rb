@@ -21,5 +21,9 @@ class User < ActiveRecord::Base
   	relationships.find_by(followed_id: other_user.id).destroy!
   end
 
+  def feed
+    Image.from_users_followed_by(self)
+  end
+
   has_many :images
 end
