@@ -140,6 +140,10 @@ img {
 
 .state-button {
   float: right;
+  height: 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 textarea, input {
@@ -199,3 +203,5 @@ textarea, input {
   text-decoration: none;
   color: inherit;
 }
+
+.profile-sidebar { }
