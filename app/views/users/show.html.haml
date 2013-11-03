@@ -4,12 +4,13 @@
 
     %div.profile-meta
       %h1= @user.name
+      
+      -if @user.id === current_user.id 
+        = link_to "New Image", new_image_path, :class => "btn btn-blue"
+        = link_to "New Album", new_album_path, :class => "btn btn-blue"
 
-      = link_to "New Image", new_image_path, :class => "btn btn-blue"
-      = link_to "New Album", new_album_path, :class => "btn btn-blue"
-
-      %br
-      %br
+        %br
+        %br
 
       = @user.name
       is following
@@ -19,9 +20,10 @@
       \#{@user.name} has
       %strong= @user.followers.count
       followers.
+      
+      \#{render 'follow_form' if user_signed_in?}
 
   %div.profile-images.clearfix
-    \#{render 'follow_form' if user_signed_in?}
     - @albums.each do |album|
       %h2.centered= link_to album.title, album_path(album), :class => "discrete-link"
       - if album.images.any?
