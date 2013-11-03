@@ -5,6 +5,7 @@
 
   <div class="centered l-center">
     <%= f.email_field :email, :autofocus => true, :placeholder => "Email address", :class => "l-stacked l-center" %>
+    <%= f.text_field :name, :autofocus => true, :placeholder => "Display name", :class => "l-stacked l-center" %>
     <%= f.password_field :password, :placeholder => "Password", :class => "l-stacked l-center" %>
     <%= f.password_field :password_confirmation, :placeholder => "Confirm password", :class => "l-stacked l-center"%>
     <%= f.submit "Sign up", :class => "l-stacked l-center" %>
