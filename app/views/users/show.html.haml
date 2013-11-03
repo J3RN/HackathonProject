@@ -1,0 +1,14 @@
+= gravatar_for @user
+%p= @user.name
+= @user.email
+= @user.name
+is following
+%strong= @user.followed_users.count
+users.
+\#{@user.name} has
+%strong= @user.followers.count
+followers.
+
+\#{render 'follow_form' if user_signed_in?}
+- @images.each do |image|
+  = image_tag image.image.url
