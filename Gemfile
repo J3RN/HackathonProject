@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# pagination (so you can click on page links)
+gem 'will_paginate'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
