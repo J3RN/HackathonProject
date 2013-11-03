@@ -1,9 +1,13 @@
 <h2 class="centered"><%= @image.title %></h2>
 
+<div class="full-image-container centered">
+  <%=image_tag @image.image.url, :class => "full-image" %>
+</div>
 <p>
   <%= @image.loves %> loves
 </p>
 
-<%=image_tag @image.image.url, :class => "full-image" %>
-
-<%= link_to 'Edit', edit_image_path(@image) %>
+<% if user_signed_in? && current_user.id === @image.user_id %>
+  <%= link_to 'Edit', edit_image_path(@image) %> | 
+  <%= link_to 'Delete', image_path(@image), :method => :delete %>
+<% end %>
