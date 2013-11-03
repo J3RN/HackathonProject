@@ -1,6 +1,10 @@
 %nav{:class => "main-navbar"}
   %ul
-    %li= link_to "FISH", root_path
+    %li
+      - if user_signed_in?
+        = link_to image_tag("300x300_fish_white_left.png", id: "logo"), dashboard_path
+      - else
+        = link_to "FISH", root_path
     %li
       - if user_signed_in?
         = link_to "Sign Out", destroy_user_session_path, :class => "btn btn-red state-button",  method: :delete
