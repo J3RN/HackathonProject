@@ -1,7 +1,12 @@
 %h1 Welcome to your dashboard, #{current_user.name}!
+
 %h2 Recent artwork
-- Image.all.each do |image|
-	= link_to image_tag(image.image.url), images_path(image)
-%h3 Recent artwork from people you've followed
-- current_user.feed.each do |u|
-	= link_to image_tag(u.image.url), images_path(u)
+%div.dashboard-images
+  - Image.all.each do |image|
+    = link_to image_tag(image.image.url), images_path(image)
+
+- unless current_user.feed.empty?
+  %h3 Recent artwork from people you've followed
+  %div.dashboard-images
+    - current_user.feed.each do |u|
+      = link_to image_tag(u.image.url), images_path(u)
