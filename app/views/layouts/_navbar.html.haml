@@ -2,9 +2,9 @@
   %ul
     %li
       - if user_signed_in?
-        = link_to image_tag("300x300_fish_white_left.png", id: "logo"), dashboard_path
+        = link_to image_tag("300x300_fish_white_left.png", id: "logo", alt: "fish"), dashboard_path
       - else
-        = link_to "FISH", root_path
+        = link_to image_tag("300x300_fish_white_left.png", id: "logo", alt: "fish"), root_path
     %li
       - if user_signed_in?
         = link_to "Sign Out", destroy_user_session_path, :class => "btn btn-red state-button",  method: :delete
