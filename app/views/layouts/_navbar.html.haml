@@ -1,17 +1,18 @@
-%nav{:class => "main-navbar"}
-  %ul
-    %li
-      - if user_signed_in?
-        = link_to image_tag("300x300_fish_white_left.png", id: "logo", alt: "fish"), dashboard_path
-      - else
-        = link_to image_tag("300x300_fish_white_left.png", id: "logo", alt: "fish"), root_path
-    %li
-      - if user_signed_in?
-        = link_to "Sign Out", destroy_user_session_path, :class => "btn btn-red state-button",  method: :delete
-        :erb
-          <a href="/users/edit"><span class="fontawesome-cog settings-cog"></span></a>
-        = link_to "/users/#{current_user.id}", :class => "user-meta-link" do
-          %p.username= current_user.name
-          = gravatar_small_for current_user
-      - else
-        = link_to "Sign In", new_user_session_path, :class => "btn btn-blue state-button"
+%nav.main-navbar
+  %div.wrapper
+    %ul
+      %li
+        - if user_signed_in?
+          = link_to image_tag("300x300_fish_white_left.png", id: "logo", alt: "fish"), dashboard_path
+        - else
+          = link_to image_tag("300x300_fish_white_left.png", id: "logo", alt: "fish"), root_path
+      %li
+        - if user_signed_in?
+          = link_to "Sign Out", destroy_user_session_path, :class => "btn btn-red state-button",  method: :delete
+          :erb
+            <a href="/users/edit"><span class="fontawesome-cog settings-cog"></span></a>
+          = link_to "/users/#{current_user.id}", :class => "user-meta-link" do
+            %p.username= current_user.name
+            = gravatar_small_for current_user
+        - else
+          = link_to "Sign In", new_user_session_path, :class => "btn btn-blue state-button"

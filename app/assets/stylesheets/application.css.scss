@@ -32,6 +32,11 @@ $superDarkGray: #222;
 $padding-amt: .5em .8em;
 $transWhite: hsla(360, 100%, 100%, 0.31);
 
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 a {
   color: $blue;
   text-decoration: none;

@@ -12,6 +12,7 @@
     %body
 
   = render 'layouts/navbar'
-  = render 'layouts/alerts'
-  = yield
-  = render 'layouts/footer'
+  %div.wrapper
+    = render 'layouts/alerts'
+    = yield
+    = render 'layouts/footer'
