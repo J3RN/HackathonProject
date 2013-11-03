@@ -1,5 +1,11 @@
 Fish::Application.routes.draw do
   devise_for :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships, only: [:create, :destroy]
   get 'users/:id' => 'users#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
