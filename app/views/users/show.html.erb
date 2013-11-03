@@ -1,3 +1,6 @@
 <%= gravatar_for @user %><br>
 <%= @user.name %><br>
 <%= @user.email %>
+<% @images.each do |image| %>
+  <%=image_tag image.image.url %>
+<% end %>
