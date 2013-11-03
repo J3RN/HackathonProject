@@ -199,10 +199,3 @@ textarea, input {
   text-decoration: none;
   color: inherit;
 }
-
-.logoff {
-  // border-box so that padding won't affect
-  // height and width of elements!
-  @include border-box;
-  height: 40px;
-}
