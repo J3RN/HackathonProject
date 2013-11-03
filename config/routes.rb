@@ -1,6 +1,7 @@
 Fish::Application.routes.draw do
   devise_for :users
   resources :images
+  resources :albums, :only => [:create, :new, :edit, :show, :update, :destroy]
   resources :users do
     member do
       get :following, :followers
