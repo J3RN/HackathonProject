@@ -4,7 +4,8 @@
   <%=image_tag @image.image.url, :class => "full-image" %>
 </div>
 <p>
-  <%= @image.loves %> loves
+  <%= @image.votes.count %><br>
+  <%= button_to 'Love', votes_path(image_id: @image.id), method: :post %></td>
 </p>
 
 <% if user_signed_in? && current_user.id === @image.user_id %>

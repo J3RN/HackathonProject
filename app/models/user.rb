@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   def feed
     Image.from_users_followed_by(self)
   end
-
+  has_many :votes
   has_many :images
   has_many :albums
 end

@@ -1,4 +1,6 @@
 Fish::Application.routes.draw do
+  resources :votes
+
   devise_for :users
   resources :images
   resources :albums, :only => [:create, :new, :edit, :show, :update, :destroy]

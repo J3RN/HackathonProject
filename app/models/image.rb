@@ -5,5 +5,5 @@ class Image < ActiveRecord::Base
   	followed_user_ids = "SELECT followed_id FROM relationships WHERE follower_id = :user_id"
   	where("user_id IN (#{followed_user_ids})", user_id: user.id)
   end
-
+  has_many :votes, dependent: :destroy
 end
