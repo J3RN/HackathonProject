@@ -1,4 +1,6 @@
 Fish::Application.routes.draw do
+  resources :images
+
   devise_for :users
   get 'users/:id' => 'users#show'
   # The priority is based upon order of creation: first created -> highest priority.
