@@ -19,6 +19,7 @@ class AlbumsController < ApplicationController
 
   def update
     @album.update(album_params)
+    redirect_to @album
   end
 
   def destroy

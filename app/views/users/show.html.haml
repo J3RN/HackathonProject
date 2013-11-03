@@ -21,3 +21,7 @@
           = link_to image_tag(image.image.url), image_path(image)
       - else
         %p.centered= "No Pictures Yet"
+    - if @orphanImages.any?
+      %h2.centered= "Other Pictures"
+      - @orphanImages.each do |image|
+        = link_to image_tag(image.image.url), image_path(image)
