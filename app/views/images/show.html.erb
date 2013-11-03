@@ -1,5 +1,5 @@
 <h2 class="centered"><%= @image.title %></h2>
-
+<h3 class="centered">Uploaded By <%= link_to @uploader.name, user_path(@uploader) %></h3>
 <div class="full-image-container centered">
   <%=image_tag @image.image.url, :class => "full-image" %>
 </div>

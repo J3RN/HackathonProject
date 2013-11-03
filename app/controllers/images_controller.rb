@@ -7,6 +7,7 @@ class ImagesController < ApplicationController
   end
 
   def show
+    @uploader = User.find(@image.user_id)
   end
 
   def new
