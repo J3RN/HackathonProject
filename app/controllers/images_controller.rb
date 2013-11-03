@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_action :set_album_hash, only: [:edit, :new]
 
   # GET /images
   # GET /images.json
@@ -67,8 +68,17 @@ class ImagesController < ApplicationController
       @image = Image.find(params[:id])
     end
 
+    def set_album_hash
+      @albums = current_user.albums
+      @albumsHash = Hash.new
+      @albumsHash["None"] = ""
+      @albums.each do |album|
+        @albumsHash[album.title] = album.id
+      end
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.require(:image).permit(:title, :loves, :image)
+      params.require(:image).permit(:title, :loves, :image, :album_id)
     end
 end

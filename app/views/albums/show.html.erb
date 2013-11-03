@@ -1,0 +1,5 @@
+<h1 class="centered"><%= @album.title %></h1>
+<% @album.images.each do |image| %>
+  <%=image_tag image.image %> 
+<% end %>
+<%= button_to "New Image", new_image_path, {:class => "btn btn-blue", :method => :get} %>
