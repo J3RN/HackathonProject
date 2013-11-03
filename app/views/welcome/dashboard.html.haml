@@ -2,5 +2,5 @@
 = link_to "New Image", 'images/new', :class => "btn btn-blue"
 %h2 Recent artwork
 - Image.all.each do |image|
-	= link_to image_tag(image.image.url), images_path(image)
+	= link_to image_tag(image.image.url), image_path(image)
 %h3 Recent artwork from people you've followed
