@@ -18,15 +18,24 @@
 $fontStack: "Open Sans", Verdana, Arial, sans-serif;
 $blue: hsla(211, 68%, 57%, 1);
 $darkBlue: darken($blue, 20%);
+$lightGray: #999;
 $darkGray: #888;
 
 body {
-  /*
-   * should always add a default background color
-   * just in case user has a weird default color set
-   */
   background: white;
   font-family: $fontStack;
+}
+
+.white {
+  text-color: white;
+}
+
+.home-feat-bg { 
+  background: url(http://css-tricks.com/examples/FullPageBackgroundImage/images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .l-stacked {
@@ -38,17 +47,31 @@ body {
 }
 
 .btn {
+  background: $lightGray;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
   padding: .5em .8em;
   color: white;
   margin-bottom: 1em;
+  @media (min-width: 600px) {
+  }
+}
+
+.btn-large {
   width: 70%;
 }
 
 .btn-blue {
   background: $blue;
+  &:hover {
+    background: darken($blue, 5%);
+  }
+  &:active {
+    -moz-box-shadow:    inset 0 0 5px $darkBlue;
+    -webkit-box-shadow: inset 0 0 5px $darkBlue;
+    box-shadow:         inset 0 0 5px $darkBlue;
+  }
 }
 
 .shadow {
