@@ -261,6 +261,10 @@ textarea, input {
   @extend .profile-images;
 }
 
+.album-images {
+  @extend .profile-images;
+}
+
 .full-image {
   max-width: 80%;
   max-height: 80%;
@@ -270,4 +274,10 @@ textarea, input {
 .discrete-link {
   text-decoration: none;
   color: inherit;
+}
+
+.welcome {
+  @media (min-width: 500px) {
+    font-size: 4em;
+  }
 }
