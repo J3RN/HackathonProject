@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
 	def show
 	    @user = User.find(params[:id])
-	    @images = @user.images
+      @albums = @user.albums
+      @orphanImages = Array.new
+      images = @user.images
+      images.each do |image|
+        if image.album_id.nil?
+          @orphanImages << image
+        end
+      end
 	end
 
 	def following

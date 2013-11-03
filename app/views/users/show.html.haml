@@ -16,5 +16,14 @@
 
   %div.profile-images.clearfix
     \#{render 'follow_form' if user_signed_in?}
-    - @images.each do |image|
-      = link_to image_tag(image.image.url), image_path(image)
+    - @albums.each do |album|
+      %h2.centered= link_to album.title, album_path(album), :class => "discrete-link"
+      - if album.images.any?
+        - album.images.each do |image|
+          = link_to image_tag(image.image.url), image_path(image)
+      - else
+        %p.centered= "No Pictures Yet"
+    - if @orphanImages.any?
+      %h2.centered= "Other Pictures"
+      - @orphanImages.each do |image|
+        = link_to image_tag(image.image.url), image_path(image)
