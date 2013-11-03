@@ -1,0 +1,16 @@
+%div.profile-sidebar
+  = gravatar_for @user
+  %h1= @user.name
+
+  = @user.name
+  is following
+  %strong= @user.followed_users.count
+  users.<br />
+
+  \#{@user.name} has
+  %strong= @user.followers.count
+  followers.
+
+\#{render 'follow_form' if user_signed_in?}
+- @images.each do |image|
+  = image_tag image.image.url
