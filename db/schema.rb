@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20131103024837) do
     t.datetime "updated_at"
   end
 
+  create_table "images", force: true do |t|
+    t.string   "caption"
+    t.string   "title"
+    t.integer  "love"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
