@@ -1,2 +1,5 @@
 %h1 Welcome to your fucking dashboard!!!
 = link_to "New Image", 'images/new', :class => "btn btn-blue"
+
+- if current_user.followers.count > 0
+  %p woot

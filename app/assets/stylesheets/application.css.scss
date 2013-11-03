@@ -221,23 +221,32 @@ textarea, input {
   }
 }
 
-.profile-wrapper {
-  white-space: nowrap;
+.profile-sidebar {
+  .gravatar {
+    min-width: 100%;
+    @media (min-width: 400px) {
+      min-width: inherit;
+      max-width: 220px;
+      margin: 0 0 0 2em;
+      width: 70%;
+    }
+  }
+  @media (min-width: 400px) {
+    float: left;
+  }
 }
 
-.profile-sidebar {
-  clear: left;
-  height: 100%;
-  float: left;
-  margin: 0 2em 0 2em;
+.profile-meta {
+  margin: 0 0 2em 2em;
 }
 
 .profile-images {
-  display: inline-block;
-  white-space: normal;
-  width: 100%;
   img {
-    height: 200px;
+    min-width: 100%;
     display: inline-block;
+    @media (min-width: 800px) {
+      min-width: inherit;
+      height: 200px;
+    }
   }
 }
