@@ -1,5 +1,6 @@
 %h1 Welcome to your fucking dashboard!!!
 = link_to "New Image", 'images/new', :class => "btn btn-blue"
-
-- if current_user.followers.count > 0
-  %p woot
+%h2 Recent artwork
+- Image.all.each do |image|
+	= link_to image_tag(image.image.url), images_path(image)
+%h3 Recent artwork from people you've followed
