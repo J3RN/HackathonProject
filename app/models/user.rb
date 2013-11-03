@@ -22,4 +22,5 @@ class User < ActiveRecord::Base
   end
 
   has_many :images
+  has_many :albums
 end

@@ -10,6 +10,8 @@ class AlbumsController < ApplicationController
 
   def create
     @album = current_user.albums.create(album_params)
+    @album.save
+    redirect_to @album
   end
 
   def edit
