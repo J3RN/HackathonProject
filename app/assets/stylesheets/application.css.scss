@@ -24,6 +24,7 @@ $lightGray: #cbcbcb;
 $darkGray: #888;
 $superDarkGray: #222;
 $padding-amt: .5em .8em;
+$transWhite: hsla(360, 100%, 100%, 0.31);
 
 body {
   background: $superLightGray;
@@ -143,4 +144,27 @@ textarea, input {
 
 #logo {
   height: 45px;
+}
+
+#footer {
+  margi-top: 2em;
+}
+
+.transparent-white {
+  background: $transWhite;
+  padding: 1em;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.main {
+  margin: 4em 0;
 }
