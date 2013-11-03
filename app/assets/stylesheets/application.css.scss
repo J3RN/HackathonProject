@@ -19,11 +19,14 @@ $fontStack: "Open Sans", Verdana, Arial, sans-serif;
 $blue: hsla(211, 68%, 57%, 1);
 $red: #FF4444;
 $darkBlue: darken($blue, 20%);
+$superLightGray: #efefef;
 $lightGray: #cbcbcb;
 $darkGray: #888;
+$superDarkGray: #222;
+$padding-amt: .5em .8em;
 
 body {
-  background: white;
+  background: $superLightGray;
   font-family: $fontStack;
 
   // Because browsers are dumb
@@ -61,7 +64,7 @@ body {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  padding: .5em .8em;
+  padding: $padding-amt;
   color: white;
   margin-bottom: 1em;
 }
@@ -100,7 +103,7 @@ body {
 }
 
 .main-navbar {
-  background: $darkGray;
+  background: $superDarkGray;
   height: 2.4em;
 }
 
@@ -115,4 +118,12 @@ body {
 
 .state-button {
   float: right;
+}
+
+textarea, input {
+  background: white;
+  border: 1px solid $lightGray;
+  padding: $padding-amt;
+  font-family: $fontStack;
+  font-size: 1.3em;
 }
