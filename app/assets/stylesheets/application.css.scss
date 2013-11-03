@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+body, html {
+  height: 100%;
+}
+
 body {
   background: $superLightGray;
   font-family: $fontStack;
@@ -131,16 +135,13 @@ img {
   .username {
     float: right;
   }
-}
-
-.main-navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 20px;
-}
-
-.main-navbar ul li {
-  display: inline;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 20px;
+    li { display: inline; }
+  }
+  margin-bottom: 2em;
 }
 
 .state-button {
@@ -220,4 +221,23 @@ textarea, input {
   }
 }
 
-.profile-sidebar { }
+.profile-wrapper {
+  white-space: nowrap;
+}
+
+.profile-sidebar {
+  clear: left;
+  height: 100%;
+  float: left;
+  margin: 0 2em 0 2em;
+}
+
+.profile-images {
+  display: inline-block;
+  white-space: normal;
+  width: 100%;
+  img {
+    height: 200px;
+    display: inline-block;
+  }
+}
