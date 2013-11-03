@@ -17,6 +17,7 @@
 
 $fontStack: "Open Sans", Verdana, Arial, sans-serif;
 $blue: hsla(211, 68%, 57%, 1);
+$red: #FF4444;
 $darkBlue: darken($blue, 20%);
 $darkGray: #888;
 
@@ -27,6 +28,10 @@ body {
    */
   background: white;
   font-family: $fontStack;
+
+  // Because browsers are dumb
+  margin: 0;
+  padding: 0;
 }
 
 .l-stacked {
@@ -51,8 +56,29 @@ body {
   background: $blue;
 }
 
+.btn-red {
+  background: $red;
+}
+
 .shadow {
   -moz-box-shadow:    0px 3px 3px 0px $darkBlue;
   -webkit-box-shadow: 0px 3px 3px 0px $darkBlue;
   box-shadow:         0px 3px 3px 0px $darkBlue;
+}
+
+.main-navbar {
+  background: $darkGray;
+}
+
+.main-navbar ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.main-navbar ul li {
+  display: inline;
+}
+
+.state-button {
+  float: right;
 }
