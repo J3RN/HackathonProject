@@ -71,6 +71,12 @@ img {
   box-shadow: $horiz $vert $asd $spread $color;
 }
 
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .btn {
   text-align: center;
   text-decoration: none;
@@ -187,4 +193,11 @@ textarea, input {
   float: right;
   vertical-align: top;
   margin: 10px 2em 0 .5em;
+}
+
+.logoff {
+  // border-box so that padding won't affect
+  // height and width of elements!
+  @include border-box;
+  height: 40px;
 }
