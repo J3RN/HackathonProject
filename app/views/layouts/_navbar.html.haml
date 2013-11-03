@@ -1,7 +1,8 @@
-%nav
-  %li= link_to "FISH", root_path
-  %li
-    - if user_signed_in?
-      = link_to "Sign Out", destroy_user_session_path, method: :delete
-    - else
-      = link_to "Sign In", new_user_session_path
+%nav{:class => "main-navbar"}
+  %ul
+    %li= link_to "FISH", root_path
+    %li
+      - if user_signed_in?
+        = link_to "Sign Out", destroy_user_session_path, :class => "btn btn-red state-button",  method: :delete
+      - else
+        = link_to "Sign In", new_user_session_path, :class => "btn btn-blue state-button"
