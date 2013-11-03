@@ -32,6 +32,11 @@ $superDarkGray: #222;
 $padding-amt: .5em .8em;
 $transWhite: hsla(360, 100%, 100%, 0.31);
 
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
 body {
   background: $superLightGray;
   font-family: $fontStack;
@@ -202,6 +207,17 @@ textarea, input {
 .user-meta-link {
   text-decoration: none;
   color: inherit;
+}
+
+.settings-cog {
+  float: right;
+  height: 40px;
+  font-size: 1.8em;
+  margin-right: .5em;
+  color: white;
+  &:hover {
+    color: darken(white, 15%);
+  }
 }
 
 .profile-sidebar { }

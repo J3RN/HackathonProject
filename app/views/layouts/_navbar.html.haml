@@ -8,6 +8,8 @@
     %li
       - if user_signed_in?
         = link_to "Sign Out", destroy_user_session_path, :class => "btn btn-red state-button",  method: :delete
+        :erb
+          <a href=""><span class="fontawesome-cog settings-cog"></span></a>
         = link_to "/users/#{current_user.id}", :class => "user-meta-link" do
           %p.username= current_user.name
           = gravatar_small_for current_user
